@@ -1,8 +1,5 @@
 node_modules
 bower_components
-dist
-commonjs
-es
 
 .DS_Store
 .idea

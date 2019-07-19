@@ -139,6 +139,8 @@ export class HotTable extends React.Component<HotTableProps, {}> {
    * @param {Object} newSettings The settings object.
    */
   private updateHot(newSettings: Handsontable.GridSettings): void {
-    this.hotInstance.updateSettings(newSettings, false);
+    if (JSON.stringify(newSettings) !== JSON.stringify(this.props.settings)) {
+      this.hotInstance.updateSettings(newSettings, false);
+    }
   }
 }
